@@ -1,3 +1,5 @@
+![ProductOptionsConnectorBundle](doc/ProductOptions.png)
+
 ProductOptionsConnectorBundle
 ==========================
 
