@@ -1,0 +1,5 @@
+batch_jobs:
+    csv_product_options_import:
+        label: Product and Attribute Options Import
+        import.label: Product import done
+        validation.label:  File encoding validation

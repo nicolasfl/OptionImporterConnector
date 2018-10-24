@@ -1,0 +1,32 @@
+{
+    "name": "nicolas-souffleur/product-options-connector-bundle",
+    "type": "symfony-bundle",
+    "description": "This new connector allows you to add the new attributes options to Akeneo automatically while importing products",
+    "homepage": "http://www.nicolas-souffleur.com",
+    "keywords": ["extensions", "akeneo" , "pim", "ecommerce", "workflow", "attributes", "import", "products", "magento", "connector"],
+    "version": "1.0.0",
+    "require": {
+      "akeneo/pim-community-dev": "3.*"
+    },
+    "license": "OSL-3.0",
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/akeneo/pim-community-dev.git",
+        "branch": "master"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Nicolas Souffleur",
+        "email": "contact@nicolas-souffleur.com",
+        "homepage": "http://www.nicolas-souffleur.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Extensions\\Bundle\\ProductOptionsConnectorBundle\\": ""
+      }
+    },
+    "minimum-stability": "dev"
+}

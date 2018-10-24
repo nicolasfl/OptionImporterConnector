@@ -1,0 +1,13 @@
+parameters:
+    extensions_product_options_connector.array_converter.flat.product.class: Extensions\Bundle\ProductOptionsConnectorBundle\ArrayConverter\StandardToFlat\Product
+
+services:
+    extensions_product_options_connector.array_converter.flat.product:
+        class: '%extensions_product_options_connector.array_converter.flat.product.class%'
+        arguments:
+            - '@pim_connector.array_converter.flat_to_standard.product_delocalized'
+            - '@pim_catalog.repository.attribute_option'
+            - '@pim_catalog.factory.attribute_option'
+            - '@pim_catalog.repository.attribute'
+            - '@pim_catalog.saver.attribute_option'
+            - '@pim_catalog.factory.attribute_option_value'

@@ -1,0 +1,15 @@
+parameters:
+    extensions_product_options_connector.connector_name.csv: Extensions Product Options CSV Connector
+    extensions_product_options_connector.job_name.csv_product_options_import: 'csv_product_options_import'
+
+services:
+    ns.product_options_connector.job.csv_product_options_import:
+        class: '%pim_connector.job.simple_job.class%'
+        arguments:
+            - '%extensions_product_options_connector.job_name.csv_product_options_import%'
+            - '@event_dispatcher'
+            - '@akeneo_batch.job_repository'
+            -
+                - '@extensions_product_options_connector.step.options_creator'
+        tags:
+            - { name: akeneo_batch.job, connector: '%extensions_product_options_connector.connector_name.csv%', type: '%pim_connector.job.import_type%' }

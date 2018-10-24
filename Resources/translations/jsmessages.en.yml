@@ -1,0 +1,13 @@
+batch_jobs:
+    csv_product_options_import:
+        label: CSV Product Import with Attribute Options Integration
+        default_steps.import: Import
+
+extensions_product_options_connector:
+    form:
+        job_instance:
+            tab:
+                properties:
+                    default_locale:
+                        title: Default locale code for the attribute option locale value
+                        help: For instance en_US

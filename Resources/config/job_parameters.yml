@@ -1,0 +1,13 @@
+parameters:
+    extensions_product_options_connector.job.job_parameters.csv_product_options_import.class: Extensions\Bundle\ProductOptionsConnectorBundle\Job\JobParameters\ProductOptionsCsvImport
+
+services:
+    extensions_product_options_connector.job.job_parameters.csv_product_options_import:
+        class: '%extensions_product_options_connector.job.job_parameters.csv_product_options_import.class%'
+        arguments:
+            - '@pim_connector.job.job_parameters.default_values_provider.product_csv_import'
+            - '@pim_connector.job.job_parameters.constraint_collection_provider.product_csv_import'
+            - ['%extensions_product_options_connector.job_name.csv_product_options_import%']
+        tags:
+            - { name: akeneo_batch.job.job_parameters.constraint_collection_provider }
+            - { name: akeneo_batch.job.job_parameters.default_values_provider }
