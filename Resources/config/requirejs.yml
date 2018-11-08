@@ -1,0 +1,3 @@
+config:
+    paths:
+        pim/job/common/edit/field/available-locales: extensionsproductoptionsconnector/js/job/form/properties/available-locales.js

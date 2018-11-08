@@ -31,6 +31,7 @@ To create the attribute option code the job will remove all the specific charact
 It's ready, enjoy. 
 
 ## Roadmap
+* [DONE] Select field with available locales in the job instance configuration
 * Add a configuration field to choose which attribute to process
 * Notify the user about the attribute options added
 

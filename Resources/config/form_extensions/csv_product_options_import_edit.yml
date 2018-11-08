@@ -96,13 +96,13 @@ extensions:
             label: pim_import_export.form.job_instance.tab.properties.file_path.title
             tooltip: pim_import_export.form.job_instance.tab.properties.file_path.help
 
-    # TODO Select Field with available locales
     pim-job-instance-product-options-import-edit-properties-default-locale:
-        module: pim/job/common/edit/field/text
+        module: pim/job/common/edit/field/available-locales
         parent: pim-job-instance-product-options-import-edit-global
         position: 121
         targetZone: properties
         config:
+            fieldName: available_locale
             fieldCode: configuration.localeDefault
             readOnly: false
             label: extensions_product_options_connector.form.job_instance.tab.properties.default_locale.title
