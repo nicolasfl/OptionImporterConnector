@@ -4,7 +4,6 @@
     "description": "This new connector allows you to add the new attributes options to Akeneo automatically while importing products",
     "homepage": "http://www.nicolas-souffleur.com",
     "keywords": ["extensions", "akeneo" , "pim", "ecommerce", "workflow", "attributes", "import", "products", "magento", "connector"],
-    "version": "1.0.1",
     "require": {
       "akeneo/pim-community-dev": "3.*"
     },
