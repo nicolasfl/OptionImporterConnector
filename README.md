@@ -3,7 +3,12 @@
 OptionImporterConnectorBundle
 ==========================
 
-This new connector allows you to add the new attributes options to Akeneo automatically while importing products
+This new connector allows you to add the new attributes options to Akeneo automatically while importing products.
+
+It is possible that during automatic imports some lines are ignored 
+because an attribute option has not been created in the PIM. Any new 
+data from this product will be ignored and you may lose it. 
+To avoid losing this data, this bundle creates the missing attribute option before processing the product itself. The value in the CSV field is used as a label and adapted to create the code. Specific characters are removed and spaces are replaced by underscores.
 
 ## Requirements
 
@@ -15,7 +20,7 @@ This new connector allows you to add the new attributes options to Akeneo automa
 
 Next, enter the following command line:
 ```console
-$php composer.phar require "nicolas-souffleur/product-options-connector-bundle":"1.0.*"
+$php composer.phar require nicolas-souffleur/option-importer-connector
 ```
 
 Then enable the bundle in the ```app/AppKernel.php``` file in the registerProjectBundles() method:
