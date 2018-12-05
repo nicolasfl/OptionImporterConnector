@@ -2,11 +2,12 @@
 
 namespace Extensions\Bundle\ProductOptionsConnectorBundle\Job\JobParameters;
 
-use Akeneo\Tool\Component\Batch\Job\JobInterface;
-use Akeneo\Tool\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;
-use Akeneo\Tool\Component\Batch\Job\JobParameters\DefaultValuesProviderInterface;
+use Akeneo\Component\Batch\Job\JobInterface;
+use Akeneo\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;
+use Akeneo\Component\Batch\Job\JobParameters\DefaultValuesProviderInterface;
 use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\Constraints\Locale;
+use Symfony\Component\Validator\Constraints\Type;
 
 /**
  * Class ProductOptionsCsvImport
@@ -50,7 +51,10 @@ class ProductOptionsCsvImport implements ConstraintCollectionProviderInterface, 
     public function getConstraintCollection()
     {
         $baseConstraints  = $this->baseConstraintCollectionProvider->getConstraintCollection();
-        $constraintFields = array_merge($baseConstraints->fields, ['localeDefault' => new Locale()]);
+        $constraintFields = array_merge($baseConstraints->fields, [
+                'localeDefault' => new Locale()
+
+            ]);
 
         return new Collection(['fields' => $constraintFields]);
     }

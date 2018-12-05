@@ -2,13 +2,16 @@
 
 namespace Extensions\Bundle\ProductOptionsConnectorBundle\ArrayConverter\StandardToFlat;
 
-use Akeneo\Tool\Component\Connector\ArrayConverter\ArrayConverterInterface;
+use Pim\Component\Connector\ArrayConverter\ArrayConverterInterface;
 use Gedmo\Sluggable\Util\Urlizer;
-use Akeneo\Tool\Component\StorageUtils\Repository\IdentifiableObjectRepositoryInterface;
-use Akeneo\Pim\Structure\Component\AttributeTypes;
-use Akeneo\Tool\Component\StorageUtils\Factory\SimpleFactoryInterface;
-use Akeneo\Pim\Structure\Component\Repository\AttributeRepositoryInterface;
-use Akeneo\Tool\Component\StorageUtils\Saver\BulkSaverInterface;
+use Akeneo\Component\StorageUtils\Repository\IdentifiableObjectRepositoryInterface;
+use Pim\Component\Catalog\AttributeTypes;
+use Akeneo\Component\StorageUtils\Factory\SimpleFactoryInterface;
+use Pim\Component\Catalog\Repository\AttributeRepositoryInterface;
+use Akeneo\Component\StorageUtils\Saver\BulkSaverInterface;
+use Akeneo\Component\Batch\Step\StepExecutionAwareInterface;
+use Akeneo\Component\Batch\Model\StepExecution;
+use Akeneo\Component\Batch\Item\DataInvalidItem;
 
 /**
  * Class Product

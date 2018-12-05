@@ -42,7 +42,7 @@ extensions:
         targetZone: container
         position: 100
         config:
-            tabTitle: pim_common.properties
+            tabTitle: pim_enrich.form.job_instance.tab.properties.code.title
             tabCode: pim-job-instance-properties
 
     pim-job-instance-product-options-import-edit-global:
@@ -63,7 +63,7 @@ extensions:
         position: 130
         config:
             class: Akeneo\Tool\Component\Batch\Model\JobInstance
-            title: pim_common.history
+            title: pim_enrich.form.job_instance.tab.history.title
             tabCode: pim-job-instance-history
 
     pim-job-instance-product-options-import-edit-properties-code:
@@ -73,7 +73,7 @@ extensions:
         targetZone: properties
         config:
             fieldCode: code
-            label: pim_common.code
+            label: pim_enrich.form.job_instance.tab.properties.code.title
             readOnly: true
 
     pim-job-instance-product-options-import-edit-properties-label:
@@ -83,7 +83,7 @@ extensions:
         targetZone: properties
         config:
             fieldCode: label
-            label: pim_common.label
+            label: pim_enrich.form.job_instance.tab.properties.label.title
 
     pim-job-instance-product-options-import-edit-properties-file-path:
         module: pim/job/common/edit/field/text
@@ -93,11 +93,11 @@ extensions:
         config:
             fieldCode: configuration.filePath
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.file_path.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.file_path.help
+            label: pim_enrich.form.job_instance.tab.properties.file_path.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.file_path.help
 
     pim-job-instance-product-options-import-edit-properties-default-locale:
-        module: pim/job/common/edit/field/available-locales
+        module: pim/job/edit/field/available-locales
         parent: pim-job-instance-product-options-import-edit-global
         position: 121
         targetZone: properties
@@ -108,6 +108,16 @@ extensions:
             label: extensions_product_options_connector.form.job_instance.tab.properties.default_locale.title
             tooltip: extensions_product_options_connector.form.job_instance.tab.properties.default_locale.help
 
+    ##pim-job-instance-csv-product-export-edit-attributes:
+    ##    module: pim/job/common/edit/field/attributes-filter
+    ##    parent: pim-job-instance-product-options-import-edit-global
+    ##    targetZone: properties
+    ##    position: 122
+    ##    config:
+    ##        fieldCode: configuration.attributesFilter
+    ##        label: extensions_product_options_connector.form.job_instance.tab.properties.attributes_filter.title
+    ##        tooltip: extensions_product_options_connector.form.job_instance.tab.properties.attributes_filter.help
+
     pim-job-instance-product-options-import-edit-properties-file-upload:
         module: pim/job/common/edit/field/switch
         parent: pim-job-instance-product-options-import-edit-global
@@ -116,8 +126,8 @@ extensions:
         config:
             fieldCode: configuration.uploadAllowed
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.upload_allowed.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.upload_allowed.help
+            label: pim_enrich.form.job_instance.tab.properties.upload_allowed.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.upload_allowed.help
             readOnly: false
 
     pim-job-instance-product-options-import-edit-properties-delimiter:
@@ -128,8 +138,8 @@ extensions:
         config:
             fieldCode: configuration.delimiter
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.delimiter.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.delimiter.help
+            label: pim_enrich.form.job_instance.tab.properties.delimiter.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.delimiter.help
 
     pim-job-instance-product-options-import-edit-properties-enclosure:
         module: pim/job/common/edit/field/text
@@ -139,8 +149,8 @@ extensions:
         config:
             fieldCode: configuration.enclosure
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.enclosure.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.enclosure.help
+            label: pim_enrich.form.job_instance.tab.properties.enclosure.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.enclosure.help
 
     pim-job-instance-product-options-import-edit-properties-decimal-separator:
         module: pim/job/common/edit/field/decimal-separator
@@ -150,8 +160,8 @@ extensions:
         config:
             fieldCode: configuration.decimalSeparator
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.decimal_separator.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.decimal_separator.help
+            label: pim_enrich.form.job_instance.tab.properties.decimal_separator.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.decimal_separator.help
 
     pim-job-instance-product-options-import-edit-properties-date-format:
         module: pim/job/product/edit/field/date-format
@@ -161,8 +171,8 @@ extensions:
         config:
             fieldCode: configuration.dateFormat
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.date_format.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.date_format.help
+            label: pim_enrich.form.job_instance.tab.properties.date_format.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.date_format.help
 
     pim-job-instance-product-options-import-edit-properties-enabled:
         module: pim/job/common/edit/field/switch
@@ -172,8 +182,8 @@ extensions:
         config:
             fieldCode: configuration.enabled
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.enabled.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.enabled.help
+            label: pim_enrich.form.job_instance.tab.properties.enabled.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.enabled.help
 
     pim-job-instance-product-options-import-edit-properties-categories-column:
         module: pim/job/common/edit/field/text
@@ -183,8 +193,8 @@ extensions:
         config:
             fieldCode: configuration.categoriesColumn
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.categories_column.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.categories_column.help
+            label: pim_enrich.form.job_instance.tab.properties.categories_column.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.categories_column.help
 
     pim-job-instance-product-options-import-edit-properties-family-column:
         module: pim/job/common/edit/field/text
@@ -194,8 +204,8 @@ extensions:
         config:
             fieldCode: configuration.familyColumn
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.family_column.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.family_column.help
+            label: pim_enrich.form.job_instance.tab.properties.family_column.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.family_column.help
 
     pim-job-instance-product-options-import-edit-properties-groups-column:
         module: pim/job/common/edit/field/text
@@ -205,8 +215,8 @@ extensions:
         config:
             fieldCode: configuration.groupsColumn
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.groups_column.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.groups_column.help
+            label: pim_enrich.form.job_instance.tab.properties.groups_column.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.groups_column.help
 
     pim-job-instance-product-options-import-edit-properties-enabled-comparison:
         module: pim/job/common/edit/field/switch
@@ -216,8 +226,8 @@ extensions:
         config:
             fieldCode: configuration.enabledComparison
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.enabled_comparison.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.enabled_comparison.help
+            label: pim_enrich.form.job_instance.tab.properties.enabled_comparison.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.enabled_comparison.help
 
     pim-job-instance-product-options-import-edit-properties-real-time-versioning:
         module: pim/job/common/edit/field/switch
@@ -227,8 +237,8 @@ extensions:
         config:
             fieldCode: configuration.realTimeVersioning
             readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.real_time_versioning.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.real_time_versioning.help
+            label: pim_enrich.form.job_instance.tab.properties.real_time_versioning.title
+            tooltip: pim_enrich.form.job_instance.tab.properties.real_time_versioning.help
 
     pim-job-instance-product-options-import-edit-label:
         module: pim/job/common/edit/label
@@ -258,7 +268,7 @@ extensions:
             trans:
                 title: confirmation.remove.import_profile
                 content: pim_common.confirm_deletion
-                success: pim_import_export.entity.job_instance.flash.delete.success
+                success: pim_enrich.entity.job_instance.flash.delete.success
                 failed: error.removing.job_instance
             redirect: pim_importexport_import_profile_index
 
@@ -282,7 +292,7 @@ extensions:
         targetZone: state
         position: 900
         config:
-            entity: pim_import_export.entity.job_instance.label
+            entity: pim_enrich.entity.job_instance.label
 
     pim-job-instance-product-options-import-edit-validation:
         module: pim/job/common/edit/validation

@@ -7,9 +7,9 @@ This new connector allows you to add the new attributes options to Akeneo automa
 
 ## Requirements
 
-| ProductOptionsConnectorBundle     | Akeneo PIM Community Edition | Akeneo PIM Enterprise Edition |
+| MappingConnectorBundle     | Akeneo PIM Community Edition | Akeneo PIM Enterprise Edition |
 |:------------------------------:|:----------------------------:|:-----------------------------:|
-| v1.0.*                         | v3.*                         | v3.*                              |
+| v1.0.*                         | v2.3.*                         | v2.3.*                              |
 
 ## Installation
 

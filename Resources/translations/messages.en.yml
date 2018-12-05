@@ -3,3 +3,12 @@ batch_jobs:
         label: Product and Attribute Options Import
         import.label: Product import done
         validation.label:  File encoding validation
+
+extensions_product_options_connector:
+    form:
+        job_instance:
+            tab:
+                properties:
+                    default_locale:
+                        title: Default locale code for the attribute option locale value
+                        help: For instance en_US

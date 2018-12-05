@@ -1,11 +1,10 @@
 'use strict';
 
 /**
- * Decimal separator fetcher
+ * Available locales fetcher
  *
- * @author    Julien Sanchez <julien@akeneo.com>
- * @copyright 2016 Akeneo SAS (http://www.akeneo.com)
- * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author                 Nicolas SOUFFLEUR, Akeneo Expert <contact@nicolas-souffleur.com>
+ * @license                http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 define([
     'jquery',
@@ -29,7 +28,6 @@ define([
                 FetcherRegistry.getFetcher('locale').fetchActivated(),
                 SelectField.prototype.configure.apply(this, arguments)
             ).then(function (availableLocales) {
-                    console.log(this.formatChoices(availableLocales));
                     this.config.options = this.formatChoices(availableLocales);
                 }.bind(this));
         },

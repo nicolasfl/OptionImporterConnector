@@ -5,7 +5,7 @@
     "homepage": "http://www.nicolas-souffleur.com",
     "keywords": ["extensions", "akeneo" , "pim", "ecommerce", "workflow", "attributes", "import", "products", "magento", "connector"],
     "require": {
-      "akeneo/pim-community-dev": "3.*"
+        "akeneo/pim-community-dev": "^2.3.0"
     },
     "license": "OSL-3.0",
     "repositories": [

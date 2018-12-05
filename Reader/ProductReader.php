@@ -1,7 +1,8 @@
 <?php
 namespace Extensions\Bundle\ProductOptionsConnectorBundle\Reader;
 
-use Akeneo\Pim\Enrichment\Component\Product\Connector\Reader\File\Csv\ProductReader as BaseReader;
+use Pim\Component\Connector\Reader\File\Csv\ProductReader as BaseReader;
+use Pim\Component\Connector\Exception\DataArrayConversionException;
 
 /**
  * Class ProductReader
@@ -11,6 +12,62 @@ use Akeneo\Pim\Enrichment\Component\Product\Connector\Reader\File\Csv\ProductRea
  */
 class ProductReader extends BaseReader
 {
+
+    /**
+     * {@inheritdoc}
+     */
+    public function read()
+    {
+        $jobParameters = $this->stepExecution->getJobParameters();
+        $filePath      = $jobParameters->get('filePath');
+        if (null === $this->fileIterator) {
+            $delimiter          = $jobParameters->get('delimiter');
+            $enclosure          = $jobParameters->get('enclosure');
+            $defaultOptions     = [
+                'reader_options' => [
+                    'fieldDelimiter' => $delimiter,
+                    'fieldEnclosure' => $enclosure,
+                ],
+            ];
+            $this->fileIterator = $this->fileIteratorFactory->create($filePath, array_merge($defaultOptions, $this->options));
+            $this->fileIterator->rewind();
+        }
+
+        $this->fileIterator->next();
+
+        if ($this->fileIterator->valid() && null !== $this->stepExecution) {
+            $this->stepExecution->incrementSummaryInfo('item_position');
+        }
+
+        $data = $this->fileIterator->current();
+
+        if (null === $data) {
+            return null;
+        }
+
+        $headers = $this->fileIterator->getHeaders();
+
+        $countHeaders = count($headers);
+        $countData    = count($data);
+
+        $this->checkColumnNumber($countHeaders, $countData, $data, $filePath);
+
+        if ($countHeaders > $countData) {
+            $missingValuesCount = $countHeaders - $countData;
+            $missingValues      = array_fill(0, $missingValuesCount, '');
+            $data               = array_merge($data, $missingValues);
+        }
+
+        $item = array_combine($this->fileIterator->getHeaders(), $data);
+
+        try {
+            $item = $this->converter->convert($item, $this->getArrayConverterOptions());
+        } catch (DataArrayConversionException $e) {
+            $this->skipItemFromConversionException($item, $e);
+        }
+
+        return $item;
+    }
 
     /**
      * @return array
