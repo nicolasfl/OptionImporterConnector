@@ -1,9 +1,9 @@
 batch_jobs:
-    csv_product_options_import:
+    csv_option_importer_import:
         label: CSV Product Import with Attribute Options Integration
         default_steps.import: Import
 
-extensions_product_options_connector:
+extensions_option_importer_connector:
     form:
         job_instance:
             tab:

@@ -1,6 +1,6 @@
-![ProductOptionsConnectorBundle](doc/ProductOptions.png)
+![OptionImporterConnectorBundle](doc/ProductOptions.png)
 
-ProductOptionsConnectorBundle
+OptionImporterConnectorBundle
 ==========================
 
 This new connector allows you to add the new attributes options to Akeneo automatically while importing products
@@ -20,7 +20,7 @@ $php composer.phar require "nicolas-souffleur/product-options-connector-bundle":
 
 Then enable the bundle in the ```app/AppKernel.php``` file in the registerProjectBundles() method:
 ```php
-$bundles[] = new \Extensions\Bundle\ProductOptionsConnectorBundle\ExtensionsProductOptionsConnectorBundle()
+$bundles[] = new \Extensions\Bundle\OptionImporterConnectorBundle\ExtensionsOptionImporterConnectorBundle()
 ```
 
 ## Usage

@@ -1,9 +1,9 @@
 parameters:
-    extensions_product_options_connector.array_converter.flat.product.class: Extensions\Bundle\ProductOptionsConnectorBundle\ArrayConverter\StandardToFlat\Product
+    extensions_option_importer_connector.array_converter.flat.product.class: Extensions\Bundle\OptionImporterConnectorBundle\ArrayConverter\StandardToFlat\Product
 
 services:
-    extensions_product_options_connector.array_converter.flat.product:
-        class: '%extensions_product_options_connector.array_converter.flat.product.class%'
+    extensions_option_importer_connector.array_converter.flat.product:
+        class: '%extensions_option_importer_connector.array_converter.flat.product.class%'
         arguments:
             - '@pim_connector.array_converter.flat_to_standard.product_delocalized'
             - '@pim_catalog.repository.attribute_option'

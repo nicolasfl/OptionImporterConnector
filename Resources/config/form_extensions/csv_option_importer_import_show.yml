@@ -1,53 +1,53 @@
 extensions:
-    pim-job-instance-product-options-import-show:
+    pim-job-instance-option-importer-import-show:
         module: pim/form/common/edit-form
 
-    pim-job-instance-product-options-import-show-main-image:
+    pim-job-instance-option-importer-import-show-main-image:
         module: pim/form/common/main-image
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: main-image
         config:
-            path: bundles/extensionsproductoptionsconnector/images/ProductOptions_mini.jpg
+            path: bundles/extensionsoptionimporterconnector/images/ProductOptions_mini.jpg
 
-    pim-job-instance-product-options-import-show-user-navigation:
+    pim-job-instance-option-importer-import-show-user-navigation:
         module: pim/menu/user-navigation
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: user-menu
         config:
             userAccount: pim_menu.user.user_account
             logout: pim_menu.user.logout
 
-    pim-job-instance-product-options-import-show-breadcrumbs:
+    pim-job-instance-option-importer-import-show-breadcrumbs:
         module: pim/common/breadcrumbs
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: breadcrumbs
         config:
             tab: pim-menu-imports
 
-    pim-job-instance-product-options-import-show-switcher:
+    pim-job-instance-option-importer-import-show-switcher:
         module: pim/job-instance/import/switcher
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         position: 0
         targetZone: meta
 
-    pim-job-instance-product-options-import-show-launch-switcher-item:
+    pim-job-instance-option-importer-import-show-launch-switcher-item:
         module: pim/job-instance/import/switcher-item
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: content
         aclResourceId: pim_importexport_import_profile_launch
         position: 40
         config:
             label: pim_enrich.form.job_instance.button.import.launch
 
-    pim-job-instance-product-options-import-show-file-path:
+    pim-job-instance-option-importer-import-show-file-path:
         module: pim/job/common/file-path
-        parent: pim-job-instance-product-options-import-show-launch-switcher-item
+        parent: pim-job-instance-option-importer-import-show-launch-switcher-item
         config:
             label: pim_enrich.form.job_instance.file_path
 
-    pim-job-instance-product-options-import-show-import-button:
+    pim-job-instance-option-importer-import-show-import-button:
         module: pim/job/common/edit/launch
-        parent: pim-job-instance-product-options-import-show-file-path
+        parent: pim-job-instance-option-importer-import-show-file-path
         targetZone: buttons
         config:
             label: pim_enrich.form.job_instance.button.import.launch
@@ -56,25 +56,25 @@ extensions:
                 path: code
                 name: code
 
-    pim-job-instance-product-options-import-show-upload-switcher-item:
+    pim-job-instance-option-importer-import-show-upload-switcher-item:
         module: pim/job-instance/import/switcher-item
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: content
         aclResourceId: pim_importexport_import_profile_launch
         position: 50
         config:
             label: pim_enrich.form.job_instance.button.import.upload_file
 
-    pim-job-instance-product-options-import-show-upload:
+    pim-job-instance-option-importer-import-show-upload:
         module: pim/job/common/edit/upload
-        parent: pim-job-instance-product-options-import-show-upload-switcher-item
+        parent: pim-job-instance-option-importer-import-show-upload-switcher-item
         position: 50
         config:
             type: csv
 
-    pim-job-instance-product-options-import-show-upload-button:
+    pim-job-instance-option-importer-import-show-upload-button:
         module: pim/job/common/edit/upload-launch
-        parent: pim-job-instance-product-options-import-show-upload-switcher-item
+        parent: pim-job-instance-option-importer-import-show-upload-switcher-item
         position: 60
         config:
             label: pim_enrich.form.job_instance.button.import.upload
@@ -83,16 +83,16 @@ extensions:
                 path: code
                 name: code
 
-    pim-job-instance-product-options-import-show-subsection:
+    pim-job-instance-option-importer-import-show-subsection:
         module: pim/form/common/subsection
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: content
         config:
             title: pim_enrich.form.job_instance.subsection.last_executions
 
-    pim-job-instance-product-options-import-show-grid:
+    pim-job-instance-option-importer-import-show-grid:
         module: pim/job/common/grid
-        parent: pim-job-instance-product-options-import-show-subsection
+        parent: pim-job-instance-option-importer-import-show-subsection
         position: 1000
         targetZone: content
         config:
@@ -100,15 +100,15 @@ extensions:
             metadata:
                 jobType: import
 
-    pim-job-instance-product-options-import-show-label:
+    pim-job-instance-option-importer-import-show-label:
         module: pim/job/common/edit/label
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: title
         position: 100
 
-    pim-job-instance-product-options-import-show-edit:
+    pim-job-instance-option-importer-import-show-edit:
         module: pim/common/redirect
-        parent: pim-job-instance-product-options-import-show
+        parent: pim-job-instance-option-importer-import-show
         targetZone: buttons
         position: 100
         config:

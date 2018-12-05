@@ -1,6 +1,6 @@
 <?php
 
-namespace Extensions\Bundle\ProductOptionsConnectorBundle\Job\JobParameters;
+namespace Extensions\Bundle\OptionImporterConnectorBundle\Job\JobParameters;
 
 use Akeneo\Component\Batch\Job\JobInterface;
 use Akeneo\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;

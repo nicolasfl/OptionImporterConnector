@@ -1,8 +1,8 @@
 services:
-    extensions_product_options_connector.provider.form.job_instance:
+    extensions_option_importer_connector.provider.form.job_instance:
         class: '%pim_enrich.provider.form.job_instance.class%'
         arguments:
             -
-                csv_product_options_import: pim-job-instance-product-options-import
+                csv_option_importer_import: pim-job-instance-option-importer-import
         tags:
             - { name: pim_enrich.provider.form }

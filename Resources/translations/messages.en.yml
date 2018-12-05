@@ -1,10 +1,10 @@
 batch_jobs:
-    csv_product_options_import:
+    csv_option_importer_import:
         label: Product and Attribute Options Import
         import.label: Product import done
         validation.label:  File encoding validation
 
-extensions_product_options_connector:
+extensions_option_importer_connector:
     form:
         job_instance:
             tab:

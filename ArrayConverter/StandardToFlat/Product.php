@@ -1,6 +1,6 @@
 <?php
 
-namespace Extensions\Bundle\ProductOptionsConnectorBundle\ArrayConverter\StandardToFlat;
+namespace Extensions\Bundle\OptionImporterConnectorBundle\ArrayConverter\StandardToFlat;
 
 use Pim\Component\Connector\ArrayConverter\ArrayConverterInterface;
 use Gedmo\Sluggable\Util\Urlizer;

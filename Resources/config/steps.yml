@@ -1,11 +1,11 @@
 services:
-    extensions_product_options_connector.step.options_creator:
+    extensions_option_importer_connector.step.options_creator:
         class: '%pim_connector.step.item_step.class%'
         arguments:
             - 'import'
             - '@event_dispatcher'
             - '@akeneo_batch.job_repository'
-            - '@extensions_product_options_connector.reader.file.csv_product'
+            - '@extensions_option_importer_connector.reader.file.csv_product'
             - '@pim_connector.processor.denormalization.product'
             - '@pim_connector.writer.database.product'
             - '%pim_job_product_batch_size%'

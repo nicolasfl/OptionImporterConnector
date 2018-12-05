@@ -1,3 +1,3 @@
 config:
     paths:
-        pim/job/edit/field/available-locales: extensionsproductoptionsconnector/js/job/available-locales
+        pim/job/edit/field/available-locales: extensionsoptionimporterconnector/js/job/available-locales

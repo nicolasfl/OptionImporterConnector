@@ -1,5 +1,5 @@
 <?php
-namespace Extensions\Bundle\ProductOptionsConnectorBundle\Reader;
+namespace Extensions\Bundle\OptionImporterConnectorBundle\Reader;
 
 use Pim\Component\Connector\Reader\File\Csv\ProductReader as BaseReader;
 use Pim\Component\Connector\Exception\DataArrayConversionException;
